@@ -5,6 +5,7 @@ import Button from '../../Components/Button'
 import RoundButton from '../../Components/RoundButton'
 import Verification from '../Vrification/Verification'
 import SocialB from '../../Components/SocialB'
+import LogIn from '../LogIn/LogIn'
 
 const SignUp = ({navigation}) => {
   return (
@@ -16,7 +17,7 @@ const SignUp = ({navigation}) => {
         <InpunField placeholder={'User Email' } keyboardType={'User email'}/>
         <InpunField placeholder={'Tel-No' } keyboardType="numeric" maxLength={10}/>
 
-        <Text style={styles.social}>You have an account <Text style={styles.login} onPress={()=> navigation.navigate()}>LogIn</Text> </Text>
+        <Text style={styles.social}>You have an account <Text style={styles.login} onPress={()=> navigation.navigate(LogIn)}>LogIn</Text> </Text>
 
         <Button lable={'Register'} onPress={()=> navigation.navigate(Verification)} />
 
