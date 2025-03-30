@@ -13,7 +13,7 @@ const SignUp = ({navigation}) => {
     <BackImg>
     <View style={styles.container}>
         <Text style={styles.text}>SignUp</Text>
-        <Image source={require("../../assets/image/Logo.png")} style={styles.img} />
+        <Image source={require("../../assets/image/Logo.jpg")} style={styles.img} />
 
         <InpunField placeholder={'User Name' } keyboardType={'User Name'}/>
         <InpunField placeholder={'User Email' } keyboardType={'User email'}/>
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     img:{
         width:200,
         height:200,
-        borderRadius:20,
+        borderRadius:500,
         resizeMode: 'contain',
     },
     social:{

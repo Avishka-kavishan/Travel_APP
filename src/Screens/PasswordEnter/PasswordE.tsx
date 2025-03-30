@@ -5,6 +5,7 @@ import InpunField from '../../Components/InpunField'
 import Button from '../../Components/Button'
 import SocialB from '../../Components/SocialB'
 import BackImg from '../../Components/BackImg'
+import LogIn from '../LogIn/LogIn'
 
 const PasswordE = ({navigation}) => {
   return (
@@ -16,7 +17,7 @@ const PasswordE = ({navigation}) => {
       <InpunField placeholder={"Password"} keyboardType={'password'} secureTextEntry={true}  />
       <InpunField placeholder={"Re-Enter Password"} keyboardType={'email'} secureTextEntry={true} />
 
-      <Button lable={"Next"} onPress={() => navigation.navigate()}/>
+      <Button lable={"Next"} onPress={() => navigation.navigate(LogIn)}/>
 
       <SocialB/>
 

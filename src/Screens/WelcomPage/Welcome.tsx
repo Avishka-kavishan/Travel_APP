@@ -8,7 +8,7 @@ const Welcome = ({navigation}) => {
   return (
     <BackImg>
     <View style={styles.container}>
-      <Image source={require("../../assets/image/Logo.png")} style={styles.img} />
+      <Image source={require("../../assets/image/Logo.jpg")} style={styles.img} />
       <Text style={styles.text}>Welcome to US</Text>
       <Text style={styles.para}>Discover the world with ExploreEase, your all-in-one travel app for seamless and unforgettable journeys—whether it’s a quick getaway, 
         a grand adventure, or a spontaneous road trip!</Text>
@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     img:{
         width:200,
         height:200,
-        borderRadius:20,
+        borderRadius:500,
         resizeMode: 'contain',
     },
     text:{

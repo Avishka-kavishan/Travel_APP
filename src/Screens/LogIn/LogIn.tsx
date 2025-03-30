@@ -5,6 +5,7 @@ import InpunField from '../../Components/InpunField'
 import Button from '../../Components/Button'
 import SocialB from '../../Components/SocialB'
 import BackImg from '../../Components/BackImg'
+import Categary from '../Categary/Categary'
 
 const LogIn = ({navigation}) => {
   return (
@@ -15,7 +16,7 @@ const LogIn = ({navigation}) => {
       <InpunField placeholder={"E-mail"} keyboardType={"email"} />
       <InpunField placeholder={'Password'} secureTextEntry={true} />
 
-      <Button lable={'Login'} onPress={() => navigation.navigate()}/>
+      <Button lable={'Login'} onPress={() => navigation.navigate(Categary)}/>
 
       <SocialB/>
 
