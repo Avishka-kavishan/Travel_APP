@@ -16,7 +16,7 @@ const SignUp = ({navigation}) => {
         <InpunField placeholder={'User Email' } keyboardType={'User email'}/>
         <InpunField placeholder={'Tel-No' } keyboardType="numeric" maxLength={10}/>
 
-        <Text style={styles.social}>You have an account <Text>LogIn</Text> </Text>
+        <Text style={styles.social}>You have an account <Text style={styles.login} onPress={()=> navigation.navigate()}>LogIn</Text> </Text>
 
         <Button lable={'Register'} onPress={()=> navigation.navigate(Verification)} />
 
@@ -50,9 +50,11 @@ const styles = StyleSheet.create({
         textAlign:'center',
         marginTop:10,
         fontSize:15,
-        fontWeight:'bold'
+        fontWeight:'500',
     },
-    
+    login:{
+        color:"white",
+    }
 })
 
 export default SignUp

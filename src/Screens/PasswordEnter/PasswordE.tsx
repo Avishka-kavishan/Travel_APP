@@ -1,11 +1,23 @@
 import { View, Text, StyleSheet } from 'react-native'
 import React from 'react'
 import TextCom from '../../Components/text'
+import InpunField from '../../Components/InpunField'
+import Button from '../../Components/Button'
+import SocialB from '../../Components/SocialB'
 
 const PasswordE = ({navigation}) => {
   return (
-    <View>
+    <View style={styles.container}>
       <TextCom lable={'Create a Password'} />
+
+      <InpunField placeholder={"E-mail"} keyboardType={'email'}  />
+      <InpunField placeholder={"Password"} keyboardType={'password'} secureTextEntry={true}  />
+      <InpunField placeholder={"Re-Enter Password"} keyboardType={'email'} secureTextEntry={true} />
+
+      <Button lable={"Next"} onPress={() => navigation.navigate()}/>
+
+      <SocialB/>
+      
     </View>
   )
 }
