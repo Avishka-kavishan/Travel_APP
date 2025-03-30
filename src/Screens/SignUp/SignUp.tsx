@@ -6,9 +6,11 @@ import RoundButton from '../../Components/RoundButton'
 import Verification from '../Vrification/Verification'
 import SocialB from '../../Components/SocialB'
 import LogIn from '../LogIn/LogIn'
+import BackImg from '../../Components/BackImg'
 
 const SignUp = ({navigation}) => {
   return (
+    <BackImg>
     <View style={styles.container}>
         <Text style={styles.text}>SignUp</Text>
         <Image source={require("../../assets/image/Logo.png")} style={styles.img} />
@@ -26,16 +28,14 @@ const SignUp = ({navigation}) => {
         <SocialB/>
         
     </View>
+    </BackImg>
   )
 }
 const styles = StyleSheet.create({
     container:{
-        flex:1,
-        backgroundColor:"#d9b596",
         alignItems:"center"
     },
     text:{
-        marginTop:90,
         textAlign:"center",
         fontWeight:"bold",
         fontSize:20,
@@ -45,7 +45,6 @@ const styles = StyleSheet.create({
         height:200,
         borderRadius:20,
         resizeMode: 'contain',
-        marginTop:10,
     },
     social:{
         textAlign:'center',
@@ -54,7 +53,8 @@ const styles = StyleSheet.create({
         fontWeight:'500',
     },
     login:{
-        color:"white",
+        color:"black",
+        textDecorationLine: 'underline'
     }
 })
 

@@ -4,10 +4,12 @@ import TextCom from '../../Components/text'
 import InpunField from '../../Components/InpunField'
 import Button from '../../Components/Button'
 import SocialB from '../../Components/SocialB'
+import BackImg from '../../Components/BackImg'
 
 const LogIn = ({navigation}) => {
   return (
-    <View style={styles.container}>
+    <BackImg>
+        <View style={styles.container}>
       <TextCom lable={'Log In'} />
 
       <InpunField placeholder={"E-mail"} keyboardType={"email"} />
@@ -16,8 +18,9 @@ const LogIn = ({navigation}) => {
       <Button lable={'Login'} onPress={() => navigation.navigate()}/>
 
       <SocialB/>
-      
+
     </View>
+    </BackImg>
   )
 }
 

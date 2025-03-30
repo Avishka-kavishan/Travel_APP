@@ -3,9 +3,11 @@ import React from 'react'
 import Button from '../../Components/Button'
 import SocialB from '../../Components/SocialB'
 import PasswordE from '../PasswordEnter/PasswordE'
+import BackImg from '../../Components/BackImg'
 
 const Verification = ({navigation}) => {
   return (
+    <BackImg>
     <View style={styles.container}>
       <Text style={styles.topic}>Verification Code</Text>
       <Text style={styles.title}>Please enter a four digit number</Text>
@@ -25,6 +27,7 @@ const Verification = ({navigation}) => {
 
 
     </View>
+    </BackImg>
   )
 }
 

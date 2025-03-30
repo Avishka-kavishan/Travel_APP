@@ -4,9 +4,11 @@ import TextCom from '../../Components/text'
 import InpunField from '../../Components/InpunField'
 import Button from '../../Components/Button'
 import SocialB from '../../Components/SocialB'
+import BackImg from '../../Components/BackImg'
 
 const PasswordE = ({navigation}) => {
   return (
+    <BackImg>
     <View style={styles.container}>
       <TextCom lable={'Create a Password'} />
 
@@ -17,8 +19,9 @@ const PasswordE = ({navigation}) => {
       <Button lable={"Next"} onPress={() => navigation.navigate()}/>
 
       <SocialB/>
-      
+
     </View>
+    </BackImg>
   )
 }
 

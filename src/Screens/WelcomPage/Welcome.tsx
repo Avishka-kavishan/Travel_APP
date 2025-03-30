@@ -2,9 +2,11 @@ import { View, Text, StyleSheet, Image ,TouchableOpacity} from 'react-native'
 import React from 'react'
 import Button from '../../Components/Button'
 import SignUp from '../SignUp/SignUp'
+import BackImg from '../../Components/BackImg'
 
 const Welcome = ({navigation}) => {
   return (
+    <BackImg>
     <View style={styles.container}>
       <Image source={require("../../assets/image/Logo.png")} style={styles.img} />
       <Text style={styles.text}>Welcome to US</Text>
@@ -13,21 +15,19 @@ const Welcome = ({navigation}) => {
         
         <Button lable={'Join Now'} onPress={()=> navigation.navigate(SignUp)} />
     </View>
+    </BackImg>
   )
 }
 
 const styles = StyleSheet.create({
     container:{
         alignItems:'center',
-        backgroundColor:"#d9b596",
-        flex:1
     },
     img:{
         width:200,
         height:200,
         borderRadius:20,
         resizeMode: 'contain',
-        marginTop:100,
     },
     text:{
         fontSize:30,
