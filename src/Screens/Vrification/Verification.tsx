@@ -2,6 +2,7 @@ import { View, Text, TextInput, StyleSheet } from 'react-native'
 import React from 'react'
 import Button from '../../Components/Button'
 import SocialB from '../../Components/SocialB'
+import PasswordE from '../PasswordEnter/PasswordE'
 
 const Verification = ({navigation}) => {
   return (
@@ -17,7 +18,7 @@ const Verification = ({navigation}) => {
       </View>
 
       <View style={styles.btt}>
-        <Button lable={"Conform"} onPress={() => navigation.navigate()} />
+        <Button lable={"Conform"} onPress={() => navigation.navigate(PasswordE)} />
       </View>
 
       <SocialB/>
