@@ -19,7 +19,7 @@ const Categary = ({ navigation }) => {
   return (
     <BackImg>
     <View style={styles.menu} > <Icon name="menu" size={40} color="black"/> </View>
-    <View style={styles.container}>
+    <View>
     <FlatList
       data={categarys}
       keyExtractor={(item) => item.id.toString()}
