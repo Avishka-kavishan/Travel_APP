@@ -1,6 +1,8 @@
 import { View, Text, StyleSheet, Image, FlatList } from "react-native";
 import React from "react";
 import BackImg from "../../Components/BackImg";
+import Icon from "react-native-vector-icons/MaterialCommunityIcons";
+
 
 const Categary = ({ navigation }) => {
   const categarys = [
@@ -16,6 +18,7 @@ const Categary = ({ navigation }) => {
 
   return (
     <BackImg>
+    <View style={styles.menu} > <Icon name="menu" size={40} color="black"/> </View>
     <View style={styles.container}>
     <FlatList
       data={categarys}
@@ -48,13 +51,18 @@ const styles = StyleSheet.create({
   text: {
     marginTop: 5,
     fontSize: 14,
-    fontWeight: "500",
+    fontWeight: "bold",
     textAlign: "center",
     color:"white",
     textShadowColor:"black",
-    textShadowRadius:5,
-    textShadowOffset:{width: -1, height:-1},
+    textShadowRadius:9,
+    textShadowOffset:{width: 1, height:1},
   },
+  menu:{
+    marginTop:-50,
+    paddingLeft:30,
+    paddingBottom:20
+  }
 });
 
 export default Categary;
