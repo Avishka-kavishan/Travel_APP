@@ -3,7 +3,6 @@ import React from "react";
 import BackImg from "../../Components/BackImg";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
-
 const Categary = ({ navigation }) => {
   const categarys = [
     { id: 1, title: "Destination", image: require("../../assets/image/Desti.png")},
@@ -22,7 +21,7 @@ const Categary = ({ navigation }) => {
     <View>
     <FlatList
       data={categarys}
-      keyExtractor={(item) => item.id.toString()}
+      keyExtractor={(item) => item.id.toFixed()}
       numColumns={2}
       columnWrapperStyle={{ justifyContent: "space-between", paddingHorizontal: 20 }}
       renderItem={({ item }) => (

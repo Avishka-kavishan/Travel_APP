@@ -1,4 +1,4 @@
-import { View, Text, TextInput, StyleSheet } from 'react-native'
+import { View, Text, TextInput, StyleSheet, Image } from 'react-native'
 import React from 'react'
 import Button from '../../Components/Button'
 import SocialB from '../../Components/SocialB'
@@ -9,6 +9,8 @@ const Verification = ({navigation}) => {
   return (
     <BackImg>
     <View style={styles.container}>
+    <Image source={require("../../assets/image/Logo.jpg")} style={styles.img} />
+      
       <Text style={styles.topic}>Verification Code</Text>
       <Text style={styles.title}>Please enter a four digit number</Text>
 
@@ -34,7 +36,6 @@ const Verification = ({navigation}) => {
 const styles =  StyleSheet.create({
     container:{
         alignItems:"center",
-        marginTop:150
     },
     title:{
         fontSize:15,
@@ -65,9 +66,16 @@ const styles =  StyleSheet.create({
         gap:20
     },
     btt:{
-        marginTop:150,
         alignItems:"center"
-    }
+    },
+    img:{
+      width:200,
+      height:200,
+      borderRadius:500,
+      resizeMode: 'contain',
+      marginBottom:50,
+      marginTop:-40,
+  },
 })
 
 export default Verification
