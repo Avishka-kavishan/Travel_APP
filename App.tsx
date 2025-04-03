@@ -9,6 +9,7 @@ import PasswordE from './src/Screens/PasswordEnter/PasswordE'
 import LogIn from './src/Screens/LogIn/LogIn'
 import Categary from './src/Screens/Categary/Categary'
 import Destination from './src/Screens/Destination/Destination'
+import Transportation from './src/Screens/Transportations/Transportation'
 
 const Stack = createStackNavigator ();
 
@@ -23,6 +24,7 @@ const App = () => {
         <Stack.Screen name="LogIn" component={LogIn} options={{ headerShown: false }}/>
         <Stack.Screen name="Categary" component={Categary} options={{ headerShown: false }}/>
         <Stack.Screen name="Destination" component={Destination} options={{ headerShown: false }}/>
+        <Stack.Screen name="Transportation" component={Transportation} options={{ headerShown: false }}/>
       </Stack.Navigator>
     </NavigationContainer>
   )

@@ -8,7 +8,7 @@ import VectorIcon from "../../Components/VectorIcon";
 const Categary = ({ navigation }) => {
   const categarys = [
     { id: 1, title: "Destination", image: require("../../assets/image/Desti.png"), screen:"Destination"},
-    { id: 2, title: "Transportation", image: require("../../assets/image/trans.png") },
+    { id: 2, title: "Transportation", image: require("../../assets/image/trans.png"), screen:"Transportation" },
     { id: 3, title: "Accommodation", image: require("../../assets/image/acco.png") },
     { id: 4, title: "Guidance", image: require("../../assets/image/guid.png") },
     { id: 5, title: "Healthcare", image: require("../../assets/image/health.png") },
@@ -25,7 +25,7 @@ const Categary = ({ navigation }) => {
       data={categarys}
       keyExtractor={(item) => item.id.toString()}
       numColumns={2}
-      columnWrapperStyle={{ justifyContent: "space-between", paddingHorizontal: 20 }}
+      columnWrapperStyle={{ justifyContent: "space-between", paddingHorizontal: 30 }}
       renderItem={({ item }) => (
         <TouchableOpacity onPress={() => item.screen && navigation.navigate(item.screen)}>
           <Image source={item.image} style={styles.image} />
