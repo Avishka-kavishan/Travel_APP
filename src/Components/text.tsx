@@ -11,7 +11,6 @@ const TextCom = ({lable}) => {
 const styles = StyleSheet.create({
     container:{
         alignItems:"center",
-        marginTop:150
     },
     topic:{
         fontSize:30,

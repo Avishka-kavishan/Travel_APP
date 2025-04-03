@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet,Image } from 'react-native'
 import React from 'react'
 import TextCom from '../../Components/text'
 import InpunField from '../../Components/InpunField'
@@ -11,6 +11,7 @@ const PasswordE = ({navigation}) => {
   return (
     <BackImg>
     <View style={styles.container}>
+      <Image source={require("../../assets/image/Logo.jpg")} style={styles.img} />
       <TextCom lable={'Create a Password'} />
 
       <InpunField placeholder={"E-mail"} keyboardType={'email'}  />
@@ -33,7 +34,14 @@ const styles = StyleSheet.create({
     Mtext:{
         textAlign:"center",
         fontWeight:'800',
-    }
+    },
+    img:{
+      width:200,
+      height:200,
+      borderRadius:500,
+      resizeMode: 'contain',
+      marginBottom:50,
+  },
 })
 
 export default PasswordE
