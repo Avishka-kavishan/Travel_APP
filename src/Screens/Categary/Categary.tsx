@@ -3,6 +3,7 @@ import React from "react";
 import BackImg from "../../Components/BackImg";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import { Screen } from "react-native-screens";
+import VectorIcon from "../../Components/VectorIcon";
 
 const Categary = ({ navigation }) => {
   const categarys = [
@@ -18,7 +19,7 @@ const Categary = ({ navigation }) => {
 
   return (
     <BackImg>
-    <View style={styles.menu} > <Icon name="menu" size={40} color="black"/> </View>
+    <VectorIcon/>
     <View>
     <FlatList
       data={categarys}
