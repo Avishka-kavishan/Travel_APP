@@ -20,18 +20,17 @@ const styles = StyleSheet.create({
     view:{
         paddingHorizontal:10,
         width:150,
+        height:65,
         paddingVertical:15,
         borderRadius:50,
-        borderColor:"black",
-        borderWidth:2,
-        backgroundColor:"#2c1d1b",
-        marginTop:60
+        backgroundColor:"#0A3B08",
+        marginTop:60,
     },
     text:{
         color:"white",
         fontWeight:"bold",
         textAlign:'center',
-        fontSize:20
+        fontSize:20,
     }
 })
 

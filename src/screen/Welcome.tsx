@@ -31,6 +31,7 @@ const Welcome = ({ navigation }: Props) => {
 const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
+    marginTop:100
   },
   img: {
     width: 200,
