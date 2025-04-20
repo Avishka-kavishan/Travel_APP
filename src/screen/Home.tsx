@@ -7,16 +7,18 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack'
 import { ParamListBase } from '@react-navigation/native'
 import LogoButt from '../components/LogoButt'
 import MenuIcon from '../components/MenuIcon'
+import Header from '../components/Header'
 
 
 type HomeScreenNavigationProp = NativeStackNavigationProp<ParamListBase, 'Home'>
 
 type Props = {
-  navigation: HomeScreenNavigationProp
+  navigation: HomeScreenNavigationProp;
+  title:string;
 }
 
 
-const Home = ({navigation}:Props) => {
+const Home = ({navigation,title}:Props) => {
 
   const Places = [
     {id:1, title:'Sigiriya', image:require('../assets/Image/sigiri.jpg')},
@@ -34,9 +36,9 @@ const Home = ({navigation}:Props) => {
         <LogoButt onPress={()=> navigation.navigate('Profile')}/>
         <LogoButt onPress={()=> navigation.navigate('Menu')}/>
       </View>
-
+        
       <View>
-        <Text style={styles.header}>Places</Text>
+        <Header title='Places'/>
       </View>
 
       <ScrollView style={styles.scrool}>
@@ -73,11 +75,7 @@ const Home = ({navigation}:Props) => {
 }
 
 const styles = StyleSheet.create({
-  header:{
-    fontSize:30,
-    fontWeight:'bold',
-    color:'white'
-  },
+  
   scrool:{
     flexDirection:'row',
     gap:20,
