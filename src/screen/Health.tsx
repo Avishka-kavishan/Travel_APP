@@ -1,11 +1,14 @@
 import { View, Text } from 'react-native'
 import React from 'react'
+import BackImg from '../components/BackImg'
 
 const Health = () => {
   return (
-    <View>
-      <Text>Health</Text>
-    </View>
+    <BackImg>
+      <View>
+        <Text>Health</Text>
+      </View>
+    </BackImg>
   )
 }
 

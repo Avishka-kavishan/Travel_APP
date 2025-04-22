@@ -49,7 +49,7 @@ const Home = ({navigation}:Props) => {
         </View>
       </ScrollView>
         
-      
+
       <FlatList 
         data={Places}
         keyExtractor={(item)=> item.id.toString()}
@@ -64,7 +64,7 @@ const Home = ({navigation}:Props) => {
           </TouchableOpacity>
         )}
         />
-   
+
     </BackImg>
   )
 }
