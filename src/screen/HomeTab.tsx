@@ -21,6 +21,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import Home from './Home';
 import Transport from './Transport';
 import Accommodation from './Accommodation';
+import Health from './Health';
 
 
 function HomeScreen({ navigation }:any) {
@@ -68,6 +69,7 @@ export default function HomeTab() {
         <Tab.Screen name="Home" component={Home}  />
         <Tab.Screen name="Transport" component={Transport} />
         <Tab.Screen name="Accommodate" component={Accommodation} />
+        <Tab.Screen name="Health" component={Health} />
       </Tab.Navigator>
   
   );
