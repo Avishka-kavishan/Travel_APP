@@ -12,7 +12,7 @@ export type BottomTabParamList = {
   Profile: undefined;
   Health: undefined;
   Transport: undefined;
-
+  Accommodate: undefined;
 };
 
 
@@ -20,6 +20,7 @@ import { Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import Home from './Home';
 import Transport from './Transport';
+import Accommodation from './Accommodation';
 
 
 function HomeScreen({ navigation }:any) {
@@ -66,6 +67,7 @@ export default function HomeTab() {
       <Tab.Navigator screenOptions={{headerShown:false}}>
         <Tab.Screen name="Home" component={Home}  />
         <Tab.Screen name="Transport" component={Transport} />
+        <Tab.Screen name="Accommodate" component={Accommodation} />
       </Tab.Navigator>
   
   );
