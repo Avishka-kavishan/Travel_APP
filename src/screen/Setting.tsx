@@ -12,19 +12,19 @@ type Props = {
   navigation: MenuProps
 }
 
-const Menu = ({navigation}:Props) => {
+const Setting = ({navigation}:Props) => {
   return (
     <BackImg>
       <View style={styles.container}>
       <View style={styles.pButton}>
         <LogoButt onPress={()=> navigation.navigate('Profile')}/>
-        <LogoButt onPress={()=> navigation.navigate('Menu')}/>
+        <LogoButt onPress={()=> navigation.navigate('Setting')}/>
       </View>
 
       <View>
-          <Header title='Menu' />
+          <Header title='Setting' />
       </View>
-
+        
       <View>
         
       </View>
@@ -50,4 +50,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default Menu
+export default Setting

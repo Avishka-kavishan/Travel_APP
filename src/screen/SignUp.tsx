@@ -15,7 +15,7 @@ const SignUp = ({navigation}: Props) => {
   return (
     <BackImg>
         <View>
-            <ButtonC title={'Sign Up'} onPress={()=> navigation.navigate('Home')} />
+            <ButtonC title={'Sign Up'} onPress={()=> navigation.navigate('HomeTab')} />
         </View>
     </BackImg>
   )

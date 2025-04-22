@@ -6,7 +6,6 @@ import ScrollButt from '../components/ScrollButt'
 import { NativeStackNavigationProp } from '@react-navigation/native-stack'
 import { ParamListBase } from '@react-navigation/native'
 import LogoButt from '../components/LogoButt'
-import MenuIcon from '../components/MenuIcon'
 import Header from '../components/Header'
 
 
@@ -14,11 +13,10 @@ type HomeScreenNavigationProp = NativeStackNavigationProp<ParamListBase, 'Home'>
 
 type Props = {
   navigation: HomeScreenNavigationProp;
-  title:string;
 }
 
 
-const Home = ({navigation,title}:Props) => {
+const Home = ({navigation}:Props) => {
 
   const Places = [
     {id:1, title:'Sigiriya', image:require('../assets/Image/sigiri.jpg')},
@@ -34,7 +32,7 @@ const Home = ({navigation,title}:Props) => {
     <BackImg>
       <View style={styles.pButton}>
         <LogoButt onPress={()=> navigation.navigate('Profile')}/>
-        <LogoButt onPress={()=> navigation.navigate('Menu')}/>
+        <LogoButt onPress={()=> navigation.navigate('Setting')}/>
       </View>
         
       <View>
@@ -51,7 +49,7 @@ const Home = ({navigation,title}:Props) => {
         </View>
       </ScrollView>
         
-      <ScrollView>
+      
       <FlatList 
         data={Places}
         keyExtractor={(item)=> item.id.toString()}
@@ -66,10 +64,7 @@ const Home = ({navigation,title}:Props) => {
           </TouchableOpacity>
         )}
         />
-      </ScrollView>
-      <View>
-        <Text>Bottum Navigation</Text>
-      </View>
+   
     </BackImg>
   )
 }
