@@ -9,7 +9,7 @@ import React from 'react';
 
 export type BottomTabParamList = {
   Home: undefined;
-  Profile: undefined;
+  Shopping: undefined;
   Health: undefined;
   Transport: undefined;
   Accommodate: undefined;
@@ -22,6 +22,7 @@ import Home from './Home';
 import Transport from './Transport';
 import Accommodation from './Accommodation';
 import Health from './Health';
+import Shopping from './Shopping';
 
 
 function HomeScreen({ navigation }:any) {
@@ -70,6 +71,7 @@ export default function HomeTab() {
         <Tab.Screen name="Transport" component={Transport} />
         <Tab.Screen name="Accommodate" component={Accommodation} />
         <Tab.Screen name="Health" component={Health} />
+        <Tab.Screen name="Shopping" component={Shopping} />
       </Tab.Navigator>
   
   );
