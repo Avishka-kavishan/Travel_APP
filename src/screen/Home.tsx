@@ -49,7 +49,7 @@ const Home = ({navigation}:Props) => {
         </View>
       </ScrollView>
         
-
+      
       <FlatList 
         data={Places}
         keyExtractor={(item)=> item.id.toString()}
@@ -64,7 +64,8 @@ const Home = ({navigation}:Props) => {
           </TouchableOpacity>
         )}
         />
-
+      <View style={styles.flat}>
+      </View>
     </BackImg>
   )
 }
@@ -102,5 +103,8 @@ const styles = StyleSheet.create({
     borderColor:'#295206',
     borderWidth:1
   },
+  flat:{
+    marginBottom:120,
+  }
 })
 export default Home

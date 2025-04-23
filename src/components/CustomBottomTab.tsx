@@ -1,10 +1,12 @@
 import { View, Text, Pressable,StyleSheet, useWindowDimensions } from 'react-native'
 import React from 'react'
 import { BottomTabBarProps } from '@react-navigation/bottom-tabs';
+import ButtonTabIcon from './ButtonTabIcon';
 
-const CustomBottomTab = ({state, navigation,descriptors} : BottomTabBarProps) => {
+
+const CustomBottomTab = ({state, navigation,descriptors,} : BottomTabBarProps) => {
     const {width} = useWindowDimensions();
-    const MARGIN = 20;
+    const MARGIN = 10;
     const TAB_BAR_WIDTH = width - 2 * MARGIN;
     const TAB_WIDTH = TAB_BAR_WIDTH / state.routes.length;
     
@@ -34,8 +36,11 @@ const CustomBottomTab = ({state, navigation,descriptors} : BottomTabBarProps) =>
           });
         };
 
+        
+
         return (
           <Pressable
+            key={route.key}
             accessibilityState={isFocused ? { selected: true } : {}}
             accessibilityLabel={options.tabBarAccessibilityLabel}
             testID={options.tabBarButtonTestID}
@@ -44,10 +49,7 @@ const CustomBottomTab = ({state, navigation,descriptors} : BottomTabBarProps) =>
             style={{ flex: 1 }}
           >
             <View style={styles.ButContainer}>
-                
-                <Text style={styles.tabText}>
-                    {route.name}
-                </Text>
+                <ButtonTabIcon route={route.name} isFocused={isFocused} />
             </View>
           </Pressable>
         );
@@ -66,17 +68,18 @@ const styles = StyleSheet.create({
         backgroundColor: '#ACD590',
         borderRadius:25,
         alignItems: 'center',
-        justifyContent: 'space-between',
+        justifyContent: 'center',
         overflow: 'hidden',
-        
-    },
-    tabText:{
-
+        padding:10,
     },
     ButContainer:{
-        flex:1,
         justifyContent:'center',
         alignItems: 'center',
+        width:60,
+        height:60,
+        backgroundColor:'white',
+        borderRadius:50,
+        marginLeft:8,
     }
 })
 
